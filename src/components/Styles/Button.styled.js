@@ -10,6 +10,9 @@ border-radius: 50px;
 text-align: center;
 font-size: 30px;
 border: none;
+&:hover {
+    transform: scale(1.1); 
+};
 }
 `;
 export default Button;

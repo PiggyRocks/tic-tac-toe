@@ -10,6 +10,9 @@ background-color: ${props =>
 props.cell ? (props.cell === "X"? "#47ed65" : "#f04a30")
 : "#B7D7E4"
 } ;
+&:hover {
+    transform: scale(1.1); 
+};
 `;
 
 export default Cell;

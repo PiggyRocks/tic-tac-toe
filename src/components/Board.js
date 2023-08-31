@@ -6,7 +6,6 @@ import Button from './Styles/Button.styled';
 
 const Board = () => {
   const n = 3; 
-
   const [cells, setCells] = useState(Array(n * n).fill(null));
   const [victory, setVictory] = useState(''); 
   const [currentPlayer, setCurrentPlayer] = useState('X'); // Track the current player
@@ -29,8 +28,9 @@ const Board = () => {
   } 
   //for highlighting the div to represent the currentPlayer
   const player1Styles = {
-    backgroundColor: currentPlayer === 'X' ? 'teal' : '#c0c2c4',
-    color: 'white',
+    backgroundColor: currentPlayer === 'X' ? 'teal' : 'white',
+    color: currentPlayer === 'X' ? 'white' : 'black',
+    border: currentPlayer === 'X' ? 'none' : '1px solid black',
     padding: '10px',
     fontSize: '15px',
     fontWeight: 'bold',
@@ -38,12 +38,13 @@ const Board = () => {
   };
   
   const player2Styles = {
-    border: currentPlayer === 'O' ? '1px solid black' : '1px solid #c0c2c4',
+    border: currentPlayer === 'O' ? 'none' : '1px solid black',
+    color: currentPlayer === 'O' ? 'white' : 'black',
     padding: '10px',
     fontSize: '15px',
     fontWeight: 'bold',
     borderRadius: '5px',
-    backgroundColor: currentPlayer === 'O' ? 'white' : '#c0c2c4',
+    backgroundColor: currentPlayer === 'O' ? 'teal' : 'white',
   }; 
   useEffect(() => {
     function checkWinner() {
