@@ -2,9 +2,14 @@ import styled from "styled-components"
 
 const Button = styled.button`
 border-radius: 10px;
-background-color: ${({currentPlayer})=> currentPlayer? '#f5f111' : '#949491'};
+background-color: indianred;
 color: white;
-
+height: 60px;
+width: 60px;
+border-radius: 50px;
+text-align: center;
+font-size: 30px;
+border: none;
 }
 `;
 export default Button;

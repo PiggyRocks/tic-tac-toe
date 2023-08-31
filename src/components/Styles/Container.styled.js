@@ -5,6 +5,6 @@ display: grid;
 grid-template-columns: repeat(${({size}) => size}, 1fr);
 grid-template-rows: repeat(${({size}) => size}, 1fr);
 gap: 10px;
-width: 400px;
+
 `;
 export default Container;
